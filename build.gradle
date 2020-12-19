@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+group 'org.study.whiteship'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.kohsuke:github-api:1.117'
+    compileOnly 'org.projectlombok:lombok:1.18.16'
+    annotationProcessor 'org.projectlombok:lombok:1.18.16'
+
+
+    testCompileOnly 'org.projectlombok:lombok:1.18.16'
+    testAnnotationProcessor 'org.projectlombok:lombok:1.18.16'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+
+}
