@@ -1,14 +1,11 @@
-package week04;
-
+import dashboard01.GitIssueBoard;
+import dashboard01.Participant;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.List;
 import java.util.Properties;
-import week04.dashboard01.GitIssueBoard;
-import week04.dashboard01.Participant;
 
-public class MainWeek04 {
+public class Main {
 
     public static void main(String[] args) throws Exception {
         runAssignment01();
@@ -20,8 +17,6 @@ public class MainWeek04 {
      * 과제 1. live-study 대시 보드를 만드는 코드를 작성하세요.
      */
     private static void runAssignment01() throws Exception {
-
-
         GitIssueBoard board = GitIssueBoard.create(getGitToken(), "whiteship/live-study");
         List<Participant> participants = board.getParticipants();
 
@@ -33,12 +28,10 @@ public class MainWeek04 {
     }
 
 
-
     private static String getGitToken() throws IOException {
         Properties properties = new Properties();
         properties.load(new FileInputStream("application.properties"));
 
-
-        return   properties.getProperty("github.token");
+        return properties.getProperty("github.token");
     }
 }

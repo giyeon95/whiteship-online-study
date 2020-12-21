@@ -1,4 +1,4 @@
-package week04.dashboard01;
+package dashboard01;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
@@ -35,5 +35,4 @@ public class Participant {
 
         return sb.toString();
     }
-
 }

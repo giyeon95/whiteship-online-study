@@ -1,4 +1,4 @@
-package week04.dashboard01;
+package dashboard01;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -26,12 +26,6 @@ public class GitIssueBoard {
         return new GitIssueBoard(token, repoContext);
     }
 
-
-    public List<Participant> getParticipants() {
-        return participants;
-    }
-
-
     private GitIssueBoard(String token, String repoContext) throws IOException {
         repo = GitHubBuilder
             .fromEnvironment().withOAuthToken(token)
@@ -39,8 +33,13 @@ public class GitIssueBoard {
 
         List<GHIssue> assignments = initAssignments();
         this.participants = getParticipants(assignments);
-
     }
+
+
+    public List<Participant> getParticipants() {
+        return participants;
+    }
+
 
     private List<GHIssue> initAssignments() throws IOException {
         return repo.getIssues(GHIssueState.ALL).stream()

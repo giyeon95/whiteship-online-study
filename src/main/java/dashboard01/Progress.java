@@ -1,4 +1,4 @@
-package week04.dashboard01;
+package dashboard01;
 
 class Progress {
 
@@ -43,6 +43,4 @@ class Progress {
 
         return this;
     }
-
-
 }
