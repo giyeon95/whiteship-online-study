@@ -25,6 +25,7 @@ public class Main {
 
 
     private static void runAssignment02() throws Exception {
+        // TEST 코드 참고 (ListNodeTest)
     }
 
 
