@@ -1,9 +1,6 @@
 package linkedlist02;
 
 
-import java.util.Objects;
-import lombok.val;
-
 public class HeaderNode implements LinkedList<Node, HeaderNode> {
 
     private Node next;
