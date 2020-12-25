@@ -1,10 +1,11 @@
-package linkedlist02;
+package linkedlist;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -59,4 +60,11 @@ class ListNodeTest {
         assertFalse(list.contains(new Node(100)));
     }
 
+
+    @Test
+    @DisplayName("노드 GET 테스트")
+    void nodeGetTest() {
+        Assertions.assertEquals(list.get(2).getData(), 5);
+        Assertions.assertEquals(list.get(1).getData(), 4);
+    }
 }

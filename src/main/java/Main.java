@@ -1,5 +1,5 @@
-import dashboard01.GitIssueBoard;
-import dashboard01.Participant;
+import dashboard.GitIssueBoard;
+import dashboard.Participant;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.util.List;

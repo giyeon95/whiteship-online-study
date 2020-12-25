@@ -1,4 +1,4 @@
-package linkedlist02;
+package linkedlist;
 
 
 public class HeaderNode implements LinkedList<Node, HeaderNode> {
@@ -32,7 +32,7 @@ public class HeaderNode implements LinkedList<Node, HeaderNode> {
 
         Node preNode = next;
 
-        for (int i = 1; i < position; i++) {
+        for (int i = 0; i < position -1 ; i++) {
             preNode = preNode.getNext();
         }
 
@@ -56,14 +56,35 @@ public class HeaderNode implements LinkedList<Node, HeaderNode> {
 
         Node preNode = next;
 
-        for (int i = 1; i < positionToRemove; i++) {
+        for (int i = 0; i < positionToRemove -1; i++) {
             preNode = preNode.getNext();
         }
 
-        Node removeTargetNode = preNode.getNext();
-        preNode.setNext(removeTargetNode.getNext());
+        if(positionToRemove == 0) {
+            this.next = null;
+        } else {
+            Node removeTargetNode = preNode.getNext();
+            preNode.setNext(removeTargetNode.getNext());
+        }
+        size--;
 
         return this;
+    }
+
+    @Override
+    public Node get(int positionToGet) {
+
+        if (positionToGet < 0 || positionToGet >= size) {
+            throw new IndexOutOfBoundsException("position out of index");
+        }
+
+        Node preNode = next;
+
+        for (int i = 0; i < positionToGet; i++) {
+            preNode = preNode.getNext();
+        }
+
+        return preNode;
     }
 
     @Override

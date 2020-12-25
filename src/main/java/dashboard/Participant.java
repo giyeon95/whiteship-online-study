@@ -1,4 +1,4 @@
-package dashboard01;
+package dashboard;
 
 import lombok.EqualsAndHashCode;
 import lombok.Getter;

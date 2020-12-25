@@ -1,4 +1,4 @@
-package stack03;
+package stack;
 
 import java.util.EmptyStackException;
 

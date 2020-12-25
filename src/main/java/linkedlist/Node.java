@@ -1,4 +1,4 @@
-package linkedlist02;
+package linkedlist;
 
 public class Node {
 

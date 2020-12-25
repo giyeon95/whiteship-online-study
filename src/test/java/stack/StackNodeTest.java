@@ -1,6 +1,4 @@
-package stack03;
-
-import static org.junit.jupiter.api.Assertions.*;
+package stack;
 
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.Assertions;
@@ -10,11 +8,11 @@ import org.junit.jupiter.api.Test;
 
 class StackNodeTest {
 
-    Stack defaultSizeStack;
+    Stack stack;
 
     @BeforeEach
     public void initStackNode() {
-        defaultSizeStack = new StackNode();
+        stack = new StackNode();
     }
 
     @Test
@@ -22,27 +20,27 @@ class StackNodeTest {
     public void stackPushExceptionTest() {
         int defaultSize = 10;
         for (int i = 0; i < defaultSize; i++) {
-            defaultSizeStack.push(i);
+            stack.push(i);
         }
-        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> defaultSizeStack.push(11));
+        Assertions.assertThrows(IndexOutOfBoundsException.class, () -> stack.push(11));
     }
 
     @Test
     @DisplayName("스택 pop Exception 테스트")
     public void stackPopExceptionTest() {
-        Assertions.assertThrows(EmptyStackException.class, () -> defaultSizeStack.pop());
+        Assertions.assertThrows(EmptyStackException.class, () -> stack.pop());
     }
 
     @Test
     @DisplayName("스택 push / pop 테스트")
     public void stackPushTest() {
-        defaultSizeStack.push(3);
-        defaultSizeStack.push(4);
-        defaultSizeStack.push(5);
+        stack.push(3);
+        stack.push(4);
+        stack.push(5);
 
-        int pop5 = defaultSizeStack.pop();
-        int pop4 = defaultSizeStack.pop();
-        int pop3 = defaultSizeStack.pop();
+        int pop5 = stack.pop();
+        int pop4 = stack.pop();
+        int pop3 = stack.pop();
         Assertions.assertEquals(pop5, 5);
         Assertions.assertEquals(pop4, 4);
         Assertions.assertEquals(pop3, 3);
