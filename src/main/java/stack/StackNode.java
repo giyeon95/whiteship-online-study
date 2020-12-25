@@ -4,9 +4,9 @@ import java.util.EmptyStackException;
 
 public class StackNode implements Stack {
 
-    int[] dataHolder;
-    int size = 10;
-    int pos = 0;
+    private int[] dataHolder;
+    private int size = 10;
+    private int pos = 0;
 
     public StackNode() {
         dataHolder = new int[size];

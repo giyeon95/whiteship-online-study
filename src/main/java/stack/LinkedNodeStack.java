@@ -6,8 +6,8 @@ import linkedlist.Node;
 
 public class LinkedNodeStack implements Stack {
 
-    HeaderNode linkedNode;
-    int pos = 0;
+    private HeaderNode linkedNode;
+    private int pos = 0;
 
     public LinkedNodeStack() {
         this.linkedNode = new HeaderNode();
